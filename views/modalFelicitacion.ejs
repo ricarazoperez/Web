@@ -1,0 +1,48 @@
+<div class = "modal fade" data-bs-backdrop = "static"  id="modalFelicitacion">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+           
+            <div class="modal-header">
+                <h5 class="modal-title">Nueva Felicitacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="container-fluid">
+                    <form method ="post" action="/nuevoAviso">
+                        <input type="hidden" name="tipo_nuevo_aviso" value="2">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="categoria">Categoría del aviso:</label>
+                                <select class="form-select" name="categoria_nuevo_aviso" id="categoria" >  
+                                  <option value="Certificado digital de persona física">Archivo Universitario</option>
+                                  <option value="Asesoría Jurídica">Asesoría Jurídica</option>
+                                  <option value="Biblioteca">Biblioteca</option>
+                                  <option value="Centro de Información">Centro de Información</option>
+                                  <option value="Departamentos docentes">Departamentos docentes</option>
+                                  <option value="Inspección de servicios">Inspección de servicios</option>
+                                  <option value="Oficina de Gestión de Infraestructuras y Mantenimiento">Oficina de Gestión de Infraestructuras y Mantenimiento</option>
+                                  <option value="Servicio de Administración">Servicio de Administración</option>
+                                  <option value="Servicio Informáticos">Servicio Informáticos</option>
+                                  <option value="Servicio de Documentación">Servicio de Documentación</option>
+                                  <option value="Servicio de Imprenta">Servicio de Imprenta</option> 
+                                  <option value="Servicio de Cafetería">Servicio de Cafetería</option>
+                                  <option value="Toda la Universidad">Toda la Universidad</option>      
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="obv">Observaciones</label>
+                        </div>
+                        <div class="row">
+                            <textarea class="col" name="observaciones" id="obv" required></textarea>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class=" mt-2 btn btn-info">ACEPTAR</button>
+                        </div>   
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

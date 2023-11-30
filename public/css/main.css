@@ -1,0 +1,43 @@
+.bodyB{
+    background-color: rgb(207, 141, 141);
+}
+
+header{
+    background-image: url(../img/logo.jpg);
+}
+
+h1{
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.usuario_info{
+    visibility: visible;
+}
+
+.barraNavegacion{
+    background-color: #8A2BE2;
+}
+
+.elemNavBar{
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5em;
+    margin-left: 1em;
+    
+}
+
+.elemNavBar:hover{
+    background: rgb(238, 142, 230);
+    color: black;
+    font-weight: bolder;
+}
+
+.colorContainer{
+
+    background-color: #e4bdc4;
+}

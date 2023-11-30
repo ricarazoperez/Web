@@ -1,0 +1,24 @@
+<header>
+    <div class="row">
+
+        <div class="col col-2">
+            <img src="/img/logoUCM.png" alt = "Logo UCM" width="150px" height="150px">
+        </div>
+        <div class="col offset-2 col-4">
+            <h1 class="text-center">UCM-CAU</h1>
+            <h2 class="text-center">Centro de Atención al Usuario</h2>
+        </div>
+        <div class= "col col-2 text-center">
+            <img src="/imagenUsuario" alt = "Imagen perfil" width="100px" height="100px"  data-bs-toggle="modal" data-bs-target="#modalPerfilUsuario" style="cursor:pointer">
+                  
+        </div>
+        <div class="col col-1 m-auto">
+            <p style="cursor:pointer" data-bs-toggle="modal" data-bs-target="#modalPerfilUsuario"> <%= nombre  %> </p>
+        </div>
+        <div class = "col col-1 m-auto mr-3">
+            <a class="btn btn-danger" href="/logout"> LOG OUT </a>
+        </div>
+    </div> 
+    <%- include("modalPerfilUsuario") %>
+</header>
+

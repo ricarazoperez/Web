@@ -1,0 +1,52 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <tr>
+            <th>Tipo</th>
+            <th>Fecha</th>
+            <th>Texto</th>
+            <th>Acciones</th> 
+        </tr>
+        <% misAvisos.forEach(function (aviso) { %>
+            <tbody>
+                <tr>
+                    <td>
+                        <% if (aviso.tipo === 0) { %>
+                            <img src="/img/sugerencia.png" alt="imagen sugerencia" width="50px" height="50px">
+                            <% } else if (aviso.tipo === 1) { %>
+                            <img src="/img/incidencia.png" alt="imagen sugerencia" width="50px" height="50px">
+                            <% } else { %>
+                            <img src="/img/felicitacion.jpg" alt="imagen sugerencia" width="50px" height="50px">
+                            <% }%>
+                    </td>
+                    <td> <%= aviso.fecha %> </td>
+                    <td id="obvservacionesMisAvTec"> <%= aviso.texto %> </td>
+                    <td>      
+                        <button type="button" id="boton_visualizar" data-bs-toggle ="modal" data-bs-target = "#modalMostrarAviso<%=aviso.idAviso%>" style="cursor:pointer">
+                            <img src="/img/visualizar.jpg" height="30px" width="30px">
+                        </button>
+                        
+                        <a href="/borrar/<%= aviso.idAviso %>">
+                            <img src="/img/borrar.jpg"height="30px" width="30px">
+                        </a>
+                    </td>
+                    <%- include("modalMostrarAviso", {aviso}) %>
+                </tr>
+            </tbody>
+        <% }); %>
+     
+    </table>
+</div>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+<script>
+    // Obtener la referencia a la celda de la tabla
+    var observaciones = document.getElementById("obvservacionesMisAvTec");
+  
+    // Mostrar solo los primeros 200 caracteres y puntos suspensivos al final en caso de superarlos
+    observaciones.innerText = observaciones.innerText.substring(0, 200) + "...";
+  </script>
+

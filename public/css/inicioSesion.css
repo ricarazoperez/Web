@@ -1,0 +1,42 @@
+body{
+    background-color: beige;
+}
+
+header{
+    background-image: url(../img/logo.jpg);
+}
+
+h1{
+    font-family: 'Courier New', Courier, sans-serif;
+}
+
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    cursor: pointer;
+    color: black;
+}
+
+a:hover{
+    background: lightcoral;
+    color: black;
+    font-weight: bolder;
+}
+
+
+fieldset {
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    font-weight: bold;
+}
+
+legend{
+    color: lightslategray;
+}
+
+.usuario_info{
+    visibility: hidden;
+}

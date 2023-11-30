@@ -1,0 +1,63 @@
+<div class = "modal fade" data-bs-backdrop = "static"  id="modalPerfilUsuario">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Información de perfil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col col-3">
+                            <h3> <%= nombre %> </h3>
+                        </div>
+                        <div class="col offset-6 col-3">
+                            <img src="/imagenUsuario" alt = "Imagen perfil" width="100px" height="100px"> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col offset-3 col-6 infoPerfilCuadro">
+                            <div class="row">
+                                <% if (perfil === 0) { %>
+                                    <p>Perfil: Alumno</p>
+                                <% } else if (perfil === 1) { %>
+                                    <p>Perfil: Personal de administración y servicios</p>
+                                <% } else if (perfil === 2) { %>
+                                    <p>Perfil: Personal Docente Investigador</p>    
+                                <% } else { %>
+                                    <p>Perfil: Antiguo Alumno</p>
+                                <% } %>
+                                <p>Contraseña: ***********************</p>
+                                <p>Fecha Creación: <%= fecha %> </p>
+                                <p>Nombre: <%= nombre %> </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col offset-3 col-6 infoPerfilAvisosCuadro">
+                            <div class="row">
+                                <p>Incidencias: </p>
+                                <p>Sugerencias: </p>
+                                <p>Felicitaciones:  </p>
+                                <% if(!esTecnico ) { %>
+                                <p>Avisos realizados: </p>
+                                <% } else { %>
+                                <p>Avisos gestionados: </p>
+                                <% } %>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-2">
+                        <button class="btn btn-info col offset-3 col-6" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+

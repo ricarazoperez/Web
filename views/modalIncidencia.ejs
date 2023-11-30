@@ -1,0 +1,111 @@
+<div class = "modal fade" data-bs-backdrop = "static"  id="modalIncidencia">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+           
+            <div class="modal-header">
+                <h5 class="modal-title">Nueva Incidencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="container-fluid">
+                    <form method ="post" action="/nuevoAviso">
+                        <input type="hidden" name="tipo_nuevo_aviso" value="1">
+                        <div class="row">
+                            <div class="form-group col-12">
+                                <label for="categoria">Categoría del aviso:</label>
+                                <select class="form-select" name="categoria_nuevo_aviso" id="categoria" >
+                                <% if (perfil !== 3){ %> 
+                                  <option value="Certificado digital de persona física">Certificado digital de persona física</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %> 
+                                    <option value="Certificado electrónico de empleado público">Certificado electrónico de empleado público</option>
+                                <% } %>
+                                <option value="Registro electrónico">Registro electrónico</option>
+                                <option value="Sede electrónica">Sede electrónica</option>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Portafirmas">Portafirmas</option>
+                                <% } %>
+                                <option value="Correo Electrónico">Correo Electrónico</option>
+                                <option value="Google Meet">Google Meet</option>
+                                <% if (perfil !== 1 && perfil !== 2){ %>
+                                <option value="Cuenta de alumno">Cuenta de alumno</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Cuenta de personal">Cuenta de personal</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Cuenta genérica">Cuenta genérica</option>ç
+                                <% } %>
+                                <% if (perfil === 1){ %>
+                                <option value="Cuenta as la Red SARA">Cuenta as la Red SARA</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Conexión por cable en despachos">Conexión por cable en despachos</option>
+                                <% } %>
+                                <% if (perfil !== 3){ %>
+                                <option value="Cortafuegos corporativo">Cortafuegos corporativo</option>
+                                <% } %>
+                                <% if (perfil === 1){ %>
+                                <option value="Resolución de nombres de dominio (DNS)">Resolución de nombres de dominio (DNS)</option>
+                                <% } %>
+                                <% if (perfil !== 3){ %>
+                                <option value="VPN Acceso remoto">VPN Acceso remoto</option>
+                                <% } %>
+                                <% if (perfil !== 3){ %>
+                                <option value="Wifi Eduroam (ssid: eduroam)">Wifi Eduroam (ssid: eduroam)</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Wifi para visitantes (ssid: UCM-Visitantes)">Wifi para visitantes (ssid: UCM-Visitantes)</option>
+                                <% } %>
+                                <% if (perfil !== 1 && perfil !== 3){ %>
+                                <option value="Aula Virtual">Aula Virtual</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Blackboard Collaborate">Blackboard Collaborate</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Listados de clase">Listados de clase</option>
+                                <% } %>
+                                <% if (perfil !== 3){ %>
+                                <option value="Moodle: Aula Global">Moodle: Aula Global</option>
+                                <% } %>
+                                <% if (perfil !== 1 && perfil !== 3){ %>
+                                <option value="Plataforma de cursos online Privados">Plataforma de cursos online Privados</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Analítica Web">Analítica Web</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Emisión de certificados SSL">Emisión de certificados SSL</option>
+                                <% } %>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Hosting: alojamiento de páginas web">Hosting: alojamiento de páginas web</option>
+                                <% } %>
+                                <option value="Portal de eventos">Portal de eventos</option>
+                                <% if (perfil !== 3 && perfil !== 0){ %>
+                                <option value="Redirecciones web">Redirecciones web</option>   
+                                <% } %>
+                                                                
+                                </select>
+                            </div>
+                            <div class="row">
+                                <label for="obv">Observaciones</label>
+                            </div>
+                            <div class="row">
+                                <textarea class="col" name="observaciones" id="obv" required></textarea>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class=" mt-2 btn btn-info">ACEPTAR</button>
+                            </div>   
+                        </div>
+                       
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

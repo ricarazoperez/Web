@@ -1,0 +1,61 @@
+<div class = "modal fade" id="modalAnularAviso<%=aviso.idAviso%>">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Aviso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col col-4">
+                            <h3>Nombre Usuario: <%= aviso.nombreUsuAviso %> </h3>
+                        </div>
+                        <div class="col offset-2 col-6">
+                            <% if (aviso.tipo === 0) { %>
+                            <h4>Aviso: <%= aviso.idAviso %> Sugerencia</h4>
+                            <% } else if (aviso.tipo == 1) { %>
+                            <h4>Aviso: <%= aviso.idAviso %> Incidencia</h4>
+                            <% } else { %>
+                            <h4>Aviso: <%= aviso.idAviso %> Felicitacion</h4>
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Fecha aviso: <%= aviso.fecha %></h4>
+                    </div>
+                    <div class="row">
+                        <h4>Comunicaciones: Correo Electrónico</h4>
+                    </div>
+                    <div class="row">
+                        <% if (aviso.perfil == 0) { %>
+                        <h4>Perfil: Alumno </h4>
+                        <% }else if (aviso.perfil == 1) { %>
+                        <h4>Perfil: PAS </h4>
+                        <% }else if (aviso.perfil == 2) { %>
+                        <h4>Perfil: PDI </h4>
+                        <% }else { %>
+                        <h4>Perfil: Antiguo Alumno </h4>
+                        <% } %>
+                    </div>
+                    <div class="row">
+                        <h4>Observaciones</h4>
+                    </div>
+                    
+                    <div class="row">
+                        <textarea readonly> <%= aviso.texto %> </textarea>
+                    </div>
+                    <div class="row">
+                        <h4>Comentarios Técnico</h4>
+                    </div>
+                    <form method = "post" action="/anularAviso/<%=aviso.idAviso%>">
+                        <div class="row">
+                            <textarea id="text_comentarios_tecnico_modal" name = "comentarios_tecnico" required> <%= aviso.comentariosTec%></textarea>
+                        </div>
+                        <button type="submit" id="botonAnular" class="mt-3 btn btn-info col offset-3 col-6"  data-bs-dismiss="modal">Anular Aviso</button>
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>

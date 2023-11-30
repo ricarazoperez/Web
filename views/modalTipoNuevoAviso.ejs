@@ -1,0 +1,33 @@
+<div class="row">
+    <button type="button" data-bs-toggle ="modal" data-bs-target = "#modalCategoriaAviso" class= "col offset-3 col-6 btn btn-primary">NUEVO AVISO</button>
+
+    <div class = "modal fade" data-bs-backdrop = "static"  id="modalCategoriaAviso">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- CABECERA DEL DIALOGO-->
+                <div class="modal-header">
+                    <h5 class="modal-title">Tipo del nuevo aviso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!--CONTENIDO DEL DIALOGO-->
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col offset-2 col-2">
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalSugerencia">Sugerencia</button>
+                            </div>
+                            <div class="col offset-1 col-2">
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalIncidencia">Incidencia</button>
+                            </div>
+                            <div class="col offset-1 col-2">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalFelicitacion">Felicitacion</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
